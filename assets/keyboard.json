@@ -1,8 +1,7 @@
 [
   {
-    "id": "tilda",
-    "code": " ",
-    "position": "1_1",
+    "id": "1_1",
+    "code": "Backquote",    
     "type": "letter",
     "langs": {
       "RU": { "def": "ё", "mod": "Ё" },
@@ -10,21 +9,27 @@
     }
   },
   {
-    "id": "num1",
-    "code": " ",
-    "position": "1_2",
+    "id": "1_2",
+    "code": "Digit1",    
     "langs": {
       "RU": { "def": "1", "mod": "!" },
       "EN": { "def": "1", "mod": "!" }
     }
   },
   {
-    "id": "num2",
-    "code": " ",
-    "position": "1_3",
+    "id": "1_3",
+    "code": "Digit2",
     "langs": {
       "RU": { "def": "2", "mod": "\"" },
       "EN": { "def": "2", "mod": "@" }
+    }
+  },
+  {
+    "id": "1_4",
+    "code": "ShiftRight",
+    "langs": {
+      "RU": { "def": "Shift", "mod": "Shift" },
+      "EN": { "def": "Shift", "mod": "Shift" }
     }
   }
 ]

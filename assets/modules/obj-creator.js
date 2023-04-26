@@ -10,11 +10,13 @@ function mouseLeave(e) {
 
 export default function createObject(_obj) {
   const obj = _obj;
+  const range = `range${obj.id.split('_')[0]}`;
   obj.DOMElement = document.createElement('div');
   obj.DOMElement.className = 'key';
   obj.DOMElement.id = obj.id;
   obj.DOMElement.addEventListener('mousedown', mouseDown);
   obj.DOMElement.addEventListener('mouseup', mouseUp);
   obj.DOMElement.addEventListener('mouseleave', mouseLeave);
+  document.getElementById(range).appendChild(obj.DOMElement); // place by position
   return false;
 }
