@@ -1,0 +1,30 @@
+[
+  {
+    "id": "tilda",
+    "code": " ",
+    "position": "1_1",
+    "type": "letter",
+    "langs": {
+      "RU": { "def": "ё", "mod": "Ё" },
+      "EN": { "def": "`", "mod": "~" }
+    }
+  },
+  {
+    "id": "num1",
+    "code": " ",
+    "position": "1_2",
+    "langs": {
+      "RU": { "def": "1", "mod": "!" },
+      "EN": { "def": "1", "mod": "!" }
+    }
+  },
+  {
+    "id": "num2",
+    "code": " ",
+    "position": "1_3",
+    "langs": {
+      "RU": { "def": "2", "mod": "\"" },
+      "EN": { "def": "2", "mod": "@" }
+    }
+  }
+]
