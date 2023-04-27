@@ -1,6 +1,6 @@
 export const keyboardJSON = './assets/keyboard.json';
 export const SETTINGS = {
-  lang: 'EN',
+  lang: 'RU',
   shiftPressed: false,
   capsLock: false,
 };
