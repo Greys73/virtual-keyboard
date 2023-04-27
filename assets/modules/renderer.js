@@ -9,7 +9,7 @@ export default function updateKeys() {
     if (!('DOMElement' in keys[id])) {
       createObject(val);
     }
-    if (keys[id].type === 'letter') { // TODO: регулярное выражение на определение буквенного символа
+    if (/[a-zA-Zа-яА-ЯёЁ]/i.test(keys[id].langs[SETTINGS.lang][type])) { // exception for letters
       type = (SETTINGS.shiftPressed !== SETTINGS.capsLock) ? 'mod' : 'def';
     } else if (SETTINGS.shiftPressed) {
       type = 'mod';
