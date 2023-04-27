@@ -17,6 +17,9 @@
 .text-area {
   border: 2px solid;
   border-radius: 5px;
+  font-family: Helvetica, Tahoma, sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
 }
 .keyboard {  
   background-color: #bcbfaa;  
@@ -25,7 +28,7 @@
   min-width: 700px;
   padding: 10px;
   font-family: Helvetica, Tahoma, sans-serif;
-  font-weight: bold;
+  font-weight: 100;
   font-size: 1.2rem;
   color: #c28686;
   text-shadow: 1px 1px 1px #753030;
@@ -49,11 +52,23 @@
   transition: all .1s ease-in-out;
   user-select: none;
 }
+.key__extra {
+  background-color: #ebdcb7;
+}
 .key:hover {  
   background-color: #faf9e8;
   cursor: pointer;
 }
+.key__extra:hover {
+  background-color: #ede4cc;
+}
 .key_pressed {  
+  background-color: #ede4cc;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+.key_pressed:not(.key__extra) {  
+  background-color: #faf9e8;
   box-shadow: 0 1px #666;
   transform: translateY(4px);
 }
