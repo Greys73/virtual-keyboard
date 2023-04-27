@@ -14,6 +14,9 @@ export default function createObject(_obj) {
   obj.DOMElement = document.createElement('div');
   obj.DOMElement.className = 'key';
   obj.DOMElement.id = obj.id;
+  if ('size' in obj) {
+    obj.DOMElement.style.width = `${parseInt(obj.size, 10)}px`;
+  }
   obj.DOMElement.addEventListener('mousedown', mouseDown);
   obj.DOMElement.addEventListener('mouseup', mouseUp);
   obj.DOMElement.addEventListener('mouseleave', mouseLeave);
