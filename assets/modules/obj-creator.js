@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
-import { calcSymbol, typeSymbol, execCommand } from './typing.js';
+import { calcSymbol } from './utils.js';
+import { typeSymbol, execCommand } from './typing.js';
 
 function processEvent(target, event) {
   const obj = window.keys.find((elem) => elem.id === target);
@@ -14,7 +15,9 @@ function processEvent(target, event) {
 }
 
 function mouseDown(e) {
-  e.target.classList.toggle('key_pressed');
+  if (!e.repeat) {
+    e.target.classList.toggle('key_pressed');
+  }
   processEvent(e.target.id, 'mousedown');
 }
 function mouseUp(e) {

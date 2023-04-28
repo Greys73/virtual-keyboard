@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
+import { calcSymbol } from './utils.js';
 import createObject from './obj-creator.js';
-import { calcSymbol } from './typing.js';
 
 export function updateKeys() {
   const { keys } = window;
@@ -14,7 +14,11 @@ export function updateKeys() {
 
 export function createHTML() {
   document.body.innerHTML = `
+  <header class="header">
+    <h1>RSS Virtual Keyboard</h1>
+  </header>
   <main class="wrapper">
+
     <section>
       <textarea name="textArea" class="text-area" cols="80" rows="10" autofocus unselectable="on"></textarea>
     </section>
@@ -28,5 +32,9 @@ export function createHTML() {
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <p>Keyboard was created in <b>OS Windows</b></p>
+    <p>To switch language use: <b>Alt + Shift</b> combination</p>
+  </footer>
   `;
 }
