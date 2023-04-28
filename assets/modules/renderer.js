@@ -20,7 +20,7 @@ export function createHTML() {
   <main class="wrapper">
 
     <section>
-      <textarea name="textArea" class="text-area" cols="80" rows="10" autofocus unselectable="on"></textarea>
+      <textarea name="textArea" class="text-area" cols="65" rows="10" autofocus unselectable="on"></textarea>
     </section>
     <section>
       <div class="keyboard">
