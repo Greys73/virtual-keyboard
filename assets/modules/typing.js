@@ -1,47 +1,75 @@
 /* eslint-disable import/extensions */
+import { calcSymbol, changeLang, changeTextLine } from './utils.js';
 import { SETTINGS } from './variables.js';
-
-export function calcSymbol(obj) {
-  let type = 'def';
-  if (/[a-zA-Zа-яА-ЯёЁ]/i.test(obj.langs[SETTINGS.lang][type])) { // exception for letters
-    type = (SETTINGS.shiftPressed !== SETTINGS.capsLock) ? 'mod' : 'def';
-  } else if (SETTINGS.shiftPressed) {
-    type = 'mod';
-  } else {
-    type = 'def';
-  }
-  return obj.langs[SETTINGS.lang][type];
-}
 
 export function typeSymbol(val) {
   const text = document.getElementsByClassName('text-area')[0];
   const start = text.selectionStart;
-  const end = text.selectionEnd;
-  text.value = `${text.value.substring(0, start)}${val}${text.value.substring(end, text.value.length)}`;
+  text.value = `${text.value.substring(0, start)}${val}${text.value.substring(start, text.value.length)}`;
   text.selectionStart = start + 1;
 }
 
 export function execCommand(cmd, event) {
   const text = document.getElementsByClassName('text-area')[0];
   const start = text.selectionStart;
-  const end = text.selectionEnd;
-  switch (cmd) {
-    case 'Enter':
-      if (event === 'mousedown') {
-        text.value = `${text.value.substring(0, start)}\n${text.value.substring(end, text.value.length)}`;
+  if (event === 'mousedown') {
+    switch (cmd) {
+      case 'ArrowUp':
+        text.selectionStart = changeTextLine(text, -1);
+        break;
+      case 'ArrowDown':
+        text.selectionStart = changeTextLine(text, 1);
+        break;
+      case 'ArrowLeft':
+        text.selectionStart = start - 1;
+        break;
+      case 'ArrowRight':
         text.selectionStart = start + 1;
-      }
-      break;
-    case 'CapsLock':
-      if (event === 'mousedown') {
+        break;
+      case 'Tab':
+        text.value = `${text.value.substring(0, start)}  ${text.value.substring(start, text.value.length)}`;
+        text.selectionStart = start + 2;
+        break;
+      case 'Enter':
+        text.value = `${text.value.substring(0, start)}\n${text.value.substring(start, text.value.length)}`;
+        text.selectionStart = start + 1;
+        break;
+      case 'Delete':
+        text.value = `${text.value.substring(0, start)}${text.value.substring(start + 1, text.value.length)}`;
+        text.selectionStart = start;
+        break;
+      case 'Backspace':
+        text.value = `${text.value.substring(0, start - 1)}${text.value.substring(start, text.value.length)}`;
+        text.selectionStart = (start > 0) ? start - 1 : 0;
+        break;
+      case 'CapsLock':
         SETTINGS.capsLock = !SETTINGS.capsLock;
-      }
-      break;
-    case 'ShiftLeft':
-    case 'ShiftRight':
-      SETTINGS.shiftPressed = event === 'mousedown';
-      break;
-    default: break;
+        break;
+      case 'ShiftLeft':
+      case 'ShiftRight':
+        SETTINGS.shiftPressed = true;
+        break;
+      case 'AltLeft':
+      case 'AltRight':
+        SETTINGS.altPressed = true;
+        break;
+      default: break;
+    }
+  } else {
+    switch (cmd) {
+      case 'ShiftLeft':
+      case 'ShiftRight':
+        SETTINGS.shiftPressed = false;
+        break;
+      case 'AltLeft':
+      case 'AltRight':
+        SETTINGS.altPressed = false;
+        break;
+      default: break;
+    }
+  }
+  if (SETTINGS.altPressed && SETTINGS.shiftPressed) {
+    changeLang();
   }
   window.keys.forEach((val, id) => {
     window.keys[id].DOMElement.innerText = calcSymbol(val);
