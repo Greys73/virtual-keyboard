@@ -42,6 +42,19 @@ export function changeTextLine(text, dir) {
   return targetPos;
 }
 
+export function splitText(text) {
+  if (text.length < 1) { return text; }
+  const lineLength = 65;
+  const lines = text.split('\n');
+  const reg = new RegExp(`.{1,${lineLength}}`, 'g');
+  const result = lines.map((str) => {
+    let res = '';
+    if (str.length > 0) { res = str.match(reg).join('\n'); }
+    return res;
+  }).join('\n');
+  return result;
+}
+
 export function saveToStorage() {
   const text = document.getElementsByClassName('text-area')[0].value;
   sessionStorage.setItem('virtualKeyboard', JSON.stringify({
