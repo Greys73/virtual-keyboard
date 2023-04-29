@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { SETTINGS } from './variables.js';
 
 export async function loadJSON(file) {
@@ -42,17 +41,16 @@ export function changeTextLine(text, dir) {
   return targetPos;
 }
 
-export function splitText(text) {
-  if (text.length < 1) { return text; }
+export function lineBreaker(text) {
   const lineLength = 65;
   const lines = text.split('\n');
   const reg = new RegExp(`.{1,${lineLength}}`, 'g');
-  const result = lines.map((str) => {
-    let res = '';
-    if (str.length > 0) { res = str.match(reg).join('\n'); }
-    return res;
-  }).join('\n');
-  return result;
+  lines.forEach((line, id) => {
+    if (line.length > 0) {
+      lines[id] = line.match(reg).join('\n');
+    }
+  });
+  return lines.join('\n');
 }
 
 export function saveToStorage() {
