@@ -1,35 +1,4 @@
-/* eslint-disable import/extensions */
-import { calcSymbol } from './utils.js';
-import { typeSymbol, execCommand } from './typing.js';
-
-function processEvent(target, event) {
-  const obj = window.keys.find((elem) => elem.id === target);
-  const val = calcSymbol(obj);
-  if (!obj.type) {
-    if (event === 'mousedown') {
-      typeSymbol(val);
-    }
-  } else {
-    execCommand(obj.code, event);
-  }
-}
-
-function mouseDown(e) {
-  if (!e.repeat) {
-    e.target.classList.toggle('key_pressed');
-  }
-  processEvent(e.target.id, 'mousedown');
-}
-function mouseUp(e) {
-  e.target.classList.remove('key_pressed');
-  processEvent(e.target.id, 'mouseUp');
-}
-function mouseLeave(e) {
-  if (e.target.innerText !== 'Shift') {
-    e.target.classList.remove('key_pressed');
-    processEvent(e.target.id, 'mouseUp');
-  }
-}
+import eventHandler from './event-handler.js';
 
 export default function createObject(_obj) {
   const obj = _obj;
@@ -45,8 +14,8 @@ export default function createObject(_obj) {
     obj.DOMElement.style.width = `${parseInt(obj.size, 10)}px`;
   }
   document.getElementById(range).appendChild(obj.DOMElement);
-  obj.DOMElement.addEventListener('mousedown', mouseDown);
-  obj.DOMElement.addEventListener('mouseup', mouseUp);
-  obj.DOMElement.addEventListener('mouseleave', mouseLeave);
+  obj.DOMElement.addEventListener('mousedown', eventHandler);
+  obj.DOMElement.addEventListener('mouseup', eventHandler);
+  obj.DOMElement.addEventListener('mouseleave', eventHandler);
   return false;
 }
