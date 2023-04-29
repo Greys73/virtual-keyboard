@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { loadFromStorage, saveToStorage, loadJSON } from './assets/modules/utils.js';
 import { keyboardJSON } from './assets/modules/variables.js';
 import { updateKeys, createHTML } from './assets/modules/renderer.js';
@@ -19,10 +18,8 @@ function tuneTextarea() {
 }
 
 function keyEvent(e) {
+  if (!window.keys) { return false; }
   const eventType = e.type === 'keydown';
-  if (!window.keys) {
-    return false;
-  }
   const obj = window.keys.find((elem) => elem.code === e.code);
   if (obj) {
     const clickEvent = new Event((eventType) ? 'mousedown' : 'mouseup');
