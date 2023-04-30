@@ -1,5 +1,9 @@
-/* eslint-disable import/extensions */
-import { calcSymbol, changeLang, changeTextLine } from './utils.js';
+import {
+  calcSymbol,
+  changeLang,
+  changeTextLine,
+  lineBreaker,
+} from './utils.js';
 import { SETTINGS } from './variables.js';
 
 export function typeSymbol(val) {
@@ -7,12 +11,13 @@ export function typeSymbol(val) {
   const start = text.selectionStart;
   text.value = `${text.value.substring(0, start)}${val}${text.value.substring(start, text.value.length)}`;
   text.selectionStart = start + 1;
+  text.value = lineBreaker(text.value);
 }
 
 export function execCommand(cmd, event) {
   const text = document.getElementsByClassName('text-area')[0];
   const start = text.selectionStart;
-  if (event === 'mousedown') {
+  if (event.type === 'mousedown') {
     switch (cmd) {
       case 'ArrowUp':
         text.selectionStart = changeTextLine(text, -1);
@@ -43,7 +48,9 @@ export function execCommand(cmd, event) {
         text.selectionStart = (start > 0) ? start - 1 : 0;
         break;
       case 'CapsLock':
-        SETTINGS.capsLock = !SETTINGS.capsLock;
+        if (!event.repeat) {
+          SETTINGS.capsLock = !SETTINGS.capsLock;
+        }
         break;
       case 'ShiftLeft':
       case 'ShiftRight':
@@ -68,7 +75,8 @@ export function execCommand(cmd, event) {
       default: break;
     }
   }
-  if (SETTINGS.altPressed && SETTINGS.shiftPressed) {
+  text.value = lineBreaker(text.value);
+  if (SETTINGS.altPressed && SETTINGS.shiftPressed && !event.repeat) {
     changeLang();
   }
   window.keys.forEach((val, id) => {

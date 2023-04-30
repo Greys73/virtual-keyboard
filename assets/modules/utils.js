@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { SETTINGS } from './variables.js';
 
 export async function loadJSON(file) {
@@ -40,6 +39,18 @@ export function changeTextLine(text, dir) {
     .reduce((acc, s) => acc + s.length + 1, 0) // суммируем длины строк
     + Math.min(lines[targetLine - 1].length, linePos); // прошлая позиция, либо конец строки
   return targetPos;
+}
+
+export function lineBreaker(text) {
+  const lineLength = 65;
+  const lines = text.split('\n');
+  const reg = new RegExp(`.{1,${lineLength}}`, 'g');
+  lines.forEach((line, id) => {
+    if (line.length > 0) {
+      lines[id] = line.match(reg).join('\n');
+    }
+  });
+  return lines.join('\n');
 }
 
 export function saveToStorage() {
