@@ -76,7 +76,7 @@ export function execCommand(cmd, event) {
     }
   }
   text.value = lineBreaker(text.value);
-  if (SETTINGS.altPressed && SETTINGS.shiftPressed) {
+  if (SETTINGS.altPressed && SETTINGS.shiftPressed && !event.repeat) {
     changeLang();
   }
   window.keys.forEach((val, id) => {
