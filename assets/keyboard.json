@@ -1,0 +1,545 @@
+[
+  {
+    "id": "1_0",
+    "code": "Backquote",
+    "langs": {
+      "RU": { "def": "ё", "mod": "Ё" },
+      "EN": { "def": "`", "mod": "~" }
+    }
+  },
+  {
+    "id": "1_1",
+    "code": "Digit1",    
+    "langs": {
+      "RU": { "def": "1", "mod": "!" },
+      "EN": { "def": "1", "mod": "!" }
+    }
+  },
+  {
+    "id": "1_2",
+    "code": "Digit2",
+    "langs": {
+      "RU": { "def": "2", "mod": "\"" },
+      "EN": { "def": "2", "mod": "@" }
+    }
+  },
+  {
+    "id": "1_3",
+    "code": "Digit3",
+    "langs": {
+      "RU": { "def": "3", "mod": "№" },
+      "EN": { "def": "3", "mod": "#" }
+    }
+  },
+  {
+    "id": "1_4",
+    "code": "Digit4",
+    "langs": {
+      "RU": { "def": "4", "mod": ";" },
+      "EN": { "def": "4", "mod": "$" }
+    }
+  },
+  {
+    "id": "1_5",
+    "code": "Digit5",
+    "langs": {
+      "RU": { "def": "5", "mod": "%" },
+      "EN": { "def": "5", "mod": "%" }
+    }
+  },
+  {
+    "id": "1_6",
+    "code": "Digit6",
+    "langs": {
+      "RU": { "def": "6", "mod": ":" },
+      "EN": { "def": "6", "mod": "^" }
+    }
+  },
+  {
+    "id": "1_7",
+    "code": "Digit7",
+    "langs": {
+      "RU": { "def": "7", "mod": "?" },
+      "EN": { "def": "7", "mod": "&" }
+    }
+  },
+  {
+    "id": "1_8",
+    "code": "Digit8",
+    "langs": {
+      "RU": { "def": "8", "mod": "*" },
+      "EN": { "def": "8", "mod": "*" }
+    }
+  },
+  {
+    "id": "1_9",
+    "code": "Digit9",
+    "langs": {
+      "RU": { "def": "9", "mod": "(" },
+      "EN": { "def": "9", "mod": "(" }
+    }
+  },
+  {
+    "id": "1_10",
+    "code": "Digit0",
+    "langs": {
+      "RU": { "def": "0", "mod": ")" },
+      "EN": { "def": "0", "mod": ")" }
+    }
+  },
+  {
+    "id": "1_11",
+    "code": "Minus",
+    "langs": {
+      "RU": { "def": "-", "mod": "_" },
+      "EN": { "def": "-", "mod": "_" }
+    }
+  },
+  {
+    "id": "1_12",
+    "code": "Equal",
+    "langs": {
+      "RU": { "def": "=", "mod": "+" },
+      "EN": { "def": "=", "mod": "+" }
+    }
+  },
+  {
+    "id": "1_13",
+    "code": "Backspace",
+    "type": "extra",
+    "size": "110px",
+    "langs": {
+      "RU": { "def": "Backspace", "mod": "Backspace" },
+      "EN": { "def": "Backspace", "mod": "Backspace" }
+    }
+  },
+
+  
+  {
+    "id": "2_0",
+    "code": "Tab",
+    "type": "extra",
+    "size": "70px",
+    "langs": {
+      "RU": { "def": "Tab", "mod": "Tab" },
+      "EN": { "def": "Tab", "mod": "Tab" }
+    }
+  },
+  {
+    "id": "2_1",
+    "code": "KeyQ",
+    "langs": {
+      "RU": { "def": "й", "mod": "Й" },
+      "EN": { "def": "q", "mod": "Q" }
+    }
+  },
+  {
+    "id": "2_2",
+    "code": "KeyW",
+    "langs": {
+      "RU": { "def": "ц", "mod": "Ц" },
+      "EN": { "def": "w", "mod": "W" }
+    }
+  },
+  {
+    "id": "2_3",
+    "code": "KeyE",
+    "langs": {
+      "RU": { "def": "у", "mod": "У" },
+      "EN": { "def": "e", "mod": "E" }
+    }
+  },
+  {
+    "id": "2_4",
+    "code": "KeyR",
+    "langs": {
+      "RU": { "def": "к", "mod": "К" },
+      "EN": { "def": "r", "mod": "R" }
+    }
+  },
+  {
+    "id": "2_5",
+    "code": "KeyT",
+    "langs": {
+      "RU": { "def": "е", "mod": "Е" },
+      "EN": { "def": "t", "mod": "T" }
+    }
+  },
+  {
+    "id": "2_6",
+    "code": "KeyY",
+    "langs": {
+      "RU": { "def": "н", "mod": "Н" },
+      "EN": { "def": "y", "mod": "Y" }
+    }
+  },
+  {
+    "id": "2_7",
+    "code": "KeyU",
+    "langs": {
+      "RU": { "def": "г", "mod": "Г" },
+      "EN": { "def": "u", "mod": "U" }
+    }
+  },
+  {
+    "id": "2_8",
+    "code": "KeyI",
+    "langs": {
+      "RU": { "def": "ш", "mod": "Ш" },
+      "EN": { "def": "i", "mod": "I" }
+    }
+  },
+  {
+    "id": "2_9",
+    "code": "KeyO",
+    "langs": {
+      "RU": { "def": "щ", "mod": "Щ" },
+      "EN": { "def": "o", "mod": "O" }
+    }
+  },
+  {
+    "id": "2_10",
+    "code": "KeyP",
+    "langs": {
+      "RU": { "def": "з", "mod": "З" },
+      "EN": { "def": "p", "mod": "P" }
+    }
+  },
+  {
+    "id": "2_11",
+    "code": "BracketLeft",
+    "langs": {
+      "RU": { "def": "х", "mod": "Х" },
+      "EN": { "def": "[", "mod": "{" }
+    }
+  },
+  {
+    "id": "2_12",
+    "code": "BracketRight",
+    "langs": {
+      "RU": { "def": "ъ", "mod": "Ъ" },
+      "EN": { "def": "]", "mod": "}" }
+    }
+  },
+  {
+    "id": "2_13",
+    "code": "Backslash",
+    "langs": {
+      "RU": { "def": "\\", "mod": "/" },
+      "EN": { "def": "\\", "mod": "|" }
+    }
+  },
+  {
+    "id": "2_14",
+    "code": "Delete",
+    "type": "extra",    
+    "langs": {
+      "RU": { "def": "Del", "mod": "Del" },
+      "EN": { "def": "Del", "mod": "Del" }
+    }
+  },
+
+  {
+    "id": "3_0",
+    "code": "CapsLock",
+    "type": "extra",
+    "size": "100px",
+    "langs": {
+      "RU": { "def": "CapsLock", "mod": "CapsLock" },
+      "EN": { "def": "CapsLock", "mod": "CapsLock" }
+    }
+  },
+  {
+    "id": "3_1",
+    "code": "KeyA",
+    "langs": {
+      "RU": { "def": "ф", "mod": "Ф" },
+      "EN": { "def": "a", "mod": "A" }
+    }
+  },
+  {
+    "id": "3_2",
+    "code": "KeyS",
+    "langs": {
+      "RU": { "def": "ы", "mod": "Ы" },
+      "EN": { "def": "s", "mod": "S" }
+    }
+  },
+  {
+    "id": "3_3",
+    "code": "KeyD",
+    "langs": {
+      "RU": { "def": "в", "mod": "В" },
+      "EN": { "def": "d", "mod": "D" }
+    }
+  },
+  {
+    "id": "3_4",
+    "code": "KeyF",
+    "langs": {
+      "RU": { "def": "а", "mod": "А" },
+      "EN": { "def": "f", "mod": "F" }
+    }
+  },
+  {
+    "id": "3_5",
+    "code": "KeyG",
+    "langs": {
+      "RU": { "def": "п", "mod": "П" },
+      "EN": { "def": "g", "mod": "G" }
+    }
+  },
+  {
+    "id": "3_6",
+    "code": "KeyH",
+    "langs": {
+      "RU": { "def": "р", "mod": "Р" },
+      "EN": { "def": "h", "mod": "H" }
+    }
+  },
+  {
+    "id": "3_7",
+    "code": "KeyJ",
+    "langs": {
+      "RU": { "def": "о", "mod": "О" },
+      "EN": { "def": "j", "mod": "J" }
+    }
+  },
+  {
+    "id": "3_8",
+    "code": "KeyK",
+    "langs": {
+      "RU": { "def": "л", "mod": "Л" },
+      "EN": { "def": "k", "mod": "K" }
+    }
+  },
+  {
+    "id": "3_9",
+    "code": "KeyL",
+    "langs": {
+      "RU": { "def": "д", "mod": "Д" },
+      "EN": { "def": "l", "mod": "L" }
+    }
+  },
+  {
+    "id": "3_10",
+    "code": "Semicolon",
+    "langs": {
+      "RU": { "def": "ж", "mod": "Ж" },
+      "EN": { "def": ";", "mod": ":" }
+    }
+  },
+  {
+    "id": "3_11",
+    "code": "Quote",
+    "langs": {
+      "RU": { "def": "э", "mod": "Э" },
+      "EN": { "def": "'", "mod": "\"" }
+    }
+  },
+  {
+    "id": "3_12",
+    "code": "Enter",
+    "type": "extra",
+    "size": "90px",
+    "langs": {
+      "RU": { "def": "Enter", "mod": "Enter" },
+      "EN": { "def": "Enter", "mod": "Enter" }
+    }
+  },
+
+  {
+    "id": "4_0",
+    "code": "ShiftLeft",
+    "type": "extra",
+    "size": "100px",
+    "langs": {
+      "RU": { "def": "Shift", "mod": "Shift" },
+      "EN": { "def": "Shift", "mod": "Shift" }
+    }
+  },
+  {
+    "id": "4_1",
+    "code": "KeyZ",
+    "langs": {
+      "RU": { "def": "я", "mod": "Я" },
+      "EN": { "def": "z", "mod": "Z" }
+    }
+  },
+  {
+    "id": "4_2",
+    "code": "KeyX",
+    "langs": {
+      "RU": { "def": "ч", "mod": "Ч" },
+      "EN": { "def": "x", "mod": "X" }
+    }
+  },
+  {
+    "id": "4_3",
+    "code": "KeyC",
+    "langs": {
+      "RU": { "def": "с", "mod": "С" },
+      "EN": { "def": "c", "mod": "C" }
+    }
+  },
+  {
+    "id": "4_4",
+    "code": "KeyV",
+    "langs": {
+      "RU": { "def": "м", "mod": "М" },
+      "EN": { "def": "v", "mod": "V" }
+    }
+  },
+  {
+    "id": "4_5",
+    "code": "KeyB",
+    "langs": {
+      "RU": { "def": "и", "mod": "И" },
+      "EN": { "def": "b", "mod": "B" }
+    }
+  },
+  {
+    "id": "4_6",
+    "code": "KeyN",
+    "langs": {
+      "RU": { "def": "т", "mod": "Т" },
+      "EN": { "def": "n", "mod": "N" }
+    }
+  },
+  {
+    "id": "4_7",
+    "code": "KeyM",
+    "langs": {
+      "RU": { "def": "ь", "mod": "Ь" },
+      "EN": { "def": "m", "mod": "M" }
+    }
+  },
+  {
+    "id": "4_8",
+    "code": "Comma",
+    "langs": {
+      "RU": { "def": "б", "mod": "Б" },
+      "EN": { "def": ",", "mod": "<" }
+    }
+  },
+  {
+    "id": "4_9",
+    "code": "Period",
+    "langs": {
+      "RU": { "def": "ю", "mod": "Ю" },
+      "EN": { "def": ".", "mod": ">" }
+    }
+  },
+  {
+    "id": "4_10",
+    "code": "Slash",
+    "langs": {
+      "RU": { "def": ".", "mod": "," },
+      "EN": { "def": "/", "mod": "?" }
+    }
+  },
+  {
+    "id": "4_11",
+    "code": "ArrowUp",
+    "type": "extra",
+    "langs": {
+      "RU": { "def": "▲", "mod": "▲" },
+      "EN": { "def": "▲", "mod": "▲" }
+    }
+  },
+  {
+    "id": "4_12",
+    "code": "ShiftRight",
+    "type": "extra",
+    "size": "105px",
+    "langs": {
+      "RU": { "def": "Shift", "mod": "Shift" },
+      "EN": { "def": "Shift", "mod": "Shift" }
+    }
+  },
+
+  {
+    "id": "5_0",
+    "code": "ControlLeft",
+    "type": "extra",
+    "size": "55px",
+    "langs": {
+      "RU": { "def": "Ctrl", "mod": "Ctrl" },
+      "EN": { "def": "Ctrl", "mod": "Ctrl" }
+    }
+  },
+  {
+    "id": "5_1",
+    "code": "MetaLeft",
+    "type": "extra",
+    "size": "45px",
+    "langs": {
+      "RU": { "def": "Win", "mod": "Win" },
+      "EN": { "def": "Win", "mod": "Win" }
+    }
+  },
+  {
+    "id": "5_2",
+    "code": "AltLeft",
+    "type": "extra",
+    "langs": {
+      "RU": { "def": "Alt", "mod": "Alt" },
+      "EN": { "def": "Alt", "mod": "Alt" }
+    }
+  },
+  {
+    "id": "5_3",
+    "code": "Space",
+    "size": "290px",
+    "langs": {
+      "RU": { "def": " ", "mod": " " },
+      "EN": { "def": " ", "mod": " " }
+    }
+  },
+  {
+    "id": "5_4",
+    "code": "AltRight",
+    "type": "extra",
+    "langs": {
+      "RU": { "def": "Alt", "mod": "Alt" },
+      "EN": { "def": "Alt", "mod": "Alt" }
+    }
+  },
+  {
+    "id": "5_5",
+    "code": "ArrowLeft",
+    "type": "extra",
+    "langs": {
+      "RU": { "def": "◄", "mod": "◄" },
+      "EN": { "def": "◄", "mod": "◄" }
+    }
+  },
+  {
+    "id": "5_6",
+    "code": "ArrowDown",
+    "type": "extra",
+    "langs": {
+      "RU": { "def": "▼", "mod": "▼" },
+      "EN": { "def": "▼", "mod": "▼" }
+    }
+  },
+  {
+    "id": "5_7",
+    "code": "ArrowRight",
+    "type": "extra",
+    "langs": {
+      "RU": { "def": "►", "mod": "►" },
+      "EN": { "def": "►", "mod": "►" }
+    }
+  },
+  {
+    "id": "5_8",
+    "code": "ControlRight",
+    "type": "extra",
+    "size": "60px",
+    "langs": {
+      "RU": { "def": "Ctrl", "mod": "Ctrl" },
+      "EN": { "def": "Ctrl", "mod": "Ctrl" }
+    }
+  }
+]
